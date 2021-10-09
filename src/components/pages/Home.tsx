@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardActionArea,
-  CardHeader,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Card, CardActionArea, CardHeader, Grid } from "@mui/material";
 import React from "react";
 import { useHistory } from "react-router";
 

@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import WittAppBar from "./components/WittAppBar";
-import DocViewer from "./views/DocViewer";
-import Home from "./views/Home";
-import NewBudget from "./views/NewBudget";
+import WittAppBar from "./components/molecules/WittAppBar";
+import DocViewer from "./components/pages/DocViewer";
+import Home from "./components/pages/Home";
+import NewBudget from "./components/pages/NewBudget";
 
 const Routes = () => {
   return (
