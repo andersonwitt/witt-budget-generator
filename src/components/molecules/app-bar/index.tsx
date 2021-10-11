@@ -1,19 +1,29 @@
-import { Facebook } from "@mui/icons-material";
-import { AppBar, Box, styled, Toolbar, Typography } from "@mui/material";
-import { useHistory } from "react-router";
+import {
+  AppBar as AppBarMui,
+  Box,
+  styled,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 
 const Offset = styled("div")(({ theme }) => theme.mixins.toolbar);
 
-const WittAppBar: React.FC = () => {
-  const history = useHistory();
+interface IAppBarProps {
+  icon: React.ReactNode;
+  title: string;
+  onClickLogo: () => void;
+}
+
+const AppBar: React.FC<IAppBarProps> = (props) => {
+  const { icon, title, onClickLogo } = props;
 
   const handleClickLogo = () => {
-    history.push("/");
+    onClickLogo();
   };
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBarMui position="fixed">
         <Toolbar
           sx={{
             display: "flex",
@@ -22,21 +32,22 @@ const WittAppBar: React.FC = () => {
           }}
         >
           <Box
+            data-testid="app-bar-logo"
             onClick={handleClickLogo}
             style={{ cursor: "pointer" }}
             display="flex"
             alignItems="center"
             justifyContent="center"
           >
-            <Facebook fontSize="large" htmlColor="#fff" />
-            <Typography ml={1}>Orçamentos</Typography>
+            {icon}
+            <Typography ml={1}>{title}</Typography>
           </Box>
           <Box></Box>
         </Toolbar>
-      </AppBar>
+      </AppBarMui>
       <Offset />
     </>
   );
 };
 
-export default WittAppBar;
+export default AppBar;

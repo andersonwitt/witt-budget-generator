@@ -1,19 +1,21 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import WittAppBar from "./components/molecules/WittAppBar";
-import DocViewer from "./components/pages/DocViewer";
-import Home from "./components/pages/Home";
-import NewBudget from "./components/pages/NewBudget";
+
+import Layout from "./components/templates/layout";
+import Home from "./components/pages/home";
+import NewBudget from "./components/pages/new-budget";
+import DocViewer from "./components/pages/doc-viewer";
 
 const Routes = () => {
   return (
     <>
       <BrowserRouter>
-        <WittAppBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/budget" component={NewBudget} />
-          <Route exact path="/viewer" component={DocViewer} />
-        </Switch>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/budget" component={NewBudget} />
+            <Route exact path="/viewer" component={DocViewer} />
+          </Switch>
+        </Layout>
       </BrowserRouter>
     </>
   );

@@ -1,10 +1,10 @@
 import { PDFViewer } from "@react-pdf/renderer";
 import { useContext, useEffect } from "react";
 import { useHistory } from "react-router";
-import BudgetPDF from "../templates/BudgetPdf";
-import { BudgetContext } from "../../contexts/Budget";
+import BudgetPDF from "../../molecules/budget-pdf";
+import { BudgetContext } from "../../../contexts/Budget";
 
-const DocViewer: React.FC = () => {
+const BudgetDocument: React.FC = () => {
   var history = useHistory();
   const { budget } = useContext(BudgetContext);
 
@@ -21,4 +21,4 @@ const DocViewer: React.FC = () => {
   );
 };
 
-export default DocViewer;
+export default BudgetDocument;

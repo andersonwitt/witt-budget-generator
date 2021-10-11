@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { BudgetContext, BudgetType } from "./contexts/Budget";
 import Routes from "./Routes";
 
-function App() {
+
+function App(): JSX.Element {
   const [budget, setBudget] = useState<BudgetType>({
     companyName: "",
     customerName: "",
