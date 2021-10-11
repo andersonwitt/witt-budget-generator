@@ -1,6 +1,6 @@
 import { Money } from "@mui/icons-material";
 import { render } from "@testing-library/react";
-import Header from "./";
+import Header from ".";
 
 describe("Header", () => {
   it("Should render Header", () => {

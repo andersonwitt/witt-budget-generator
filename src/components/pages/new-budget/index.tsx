@@ -1,8 +1,8 @@
 import React from "react";
-import NewBudgetForm from "../../templates/NewBudgetForm";
+import NewBudget from "../../organisms/new-budget";
 
-const NewBudget: React.FC = () => {
-  return <NewBudgetForm />;
+const NewBudgetPage: React.FC = () => {
+  return <NewBudget />;
 };
 
-export default NewBudget;
+export default NewBudgetPage;
