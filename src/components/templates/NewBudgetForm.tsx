@@ -1,6 +1,5 @@
-import { Money } from "@mui/icons-material";
+import { ListAltOutlined } from "@mui/icons-material";
 import {
-  Avatar,
   Box,
   Button,
   Grid,
@@ -12,6 +11,7 @@ import {
 import { useContext } from "react";
 import { useHistory } from "react-router";
 import { BudgetContext, BudgetItemType } from "../../contexts/Budget";
+import Header from "../organisms/header";
 
 const NewBudgetForm: React.FC = () => {
   const theme = useTheme();
@@ -96,14 +96,12 @@ const NewBudgetForm: React.FC = () => {
   return (
     <Grid spacing={2} container>
       <Grid mb={2} item xs={12}>
-        <Box width="100%" display="flex" alignItems="center">
-          <Avatar style={{ width: 50, height: 50 }}>
-            <Money fontSize="large" />
-          </Avatar>
-          <Typography variant="h6" ml={2}>
-            Novo orçamento
-          </Typography>
-        </Box>
+        <Header
+          title="Novo orçamento"
+          icon={<ListAltOutlined fontSize="large" />}
+          backgroundColor="#c62828"
+          color="#fff"
+        />
       </Grid>
       <Grid item xs={12}>
         <Typography variant="h6">Seus Dados</Typography>

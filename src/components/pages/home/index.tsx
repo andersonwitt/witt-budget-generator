@@ -1,6 +1,7 @@
-import { Card, CardActionArea, CardHeader, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import { useHistory } from "react-router";
+import Card from "../../molecules/card";
 
 const Home: React.FC = () => {
   const history = useHistory();
@@ -10,13 +11,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <Grid p={2} spacing={2} container>
+    <Grid spacing={2} container>
       <Grid item xs={4}>
-        <Card>
-          <CardActionArea onClick={handleClickBudget}>
-            <CardHeader title="Novo Orçamento" />
-          </CardActionArea>
-        </Card>
+        <Card title="Novo orçamento" cardAction={handleClickBudget} />
       </Grid>
     </Grid>
   );

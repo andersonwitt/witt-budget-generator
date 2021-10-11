@@ -1,8 +1,8 @@
 import { PDFViewer } from "@react-pdf/renderer";
 import { useContext, useEffect } from "react";
 import { useHistory } from "react-router";
-import BudgetPDF from "../templates/BudgetPdf";
-import { BudgetContext } from "../../contexts/Budget";
+import BudgetPDF from "../../templates/BudgetPdf";
+import { BudgetContext } from "../../../contexts/Budget";
 
 const DocViewer: React.FC = () => {
   var history = useHistory();
